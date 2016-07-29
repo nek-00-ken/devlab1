@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  roles:
+    - oracle-java-8
+    - nexus-deploy

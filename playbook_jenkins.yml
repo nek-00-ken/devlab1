@@ -1,0 +1,7 @@
+---
+
+- hosts: all
+  roles:
+    - oracle-java-8
+    - apache-tomcat-8
+    - jenkins-deploy

@@ -1,0 +1,17 @@
+
+#---------------
+# CI/CD Tools
+#---------------
+[jenkins2]
+devlab1-jnks001v  ansible_host=192.168.10.10 ansible_ssh_port=2200
+
+[gitlab]
+devlab1-glab001v  ansible_host=192.168.10.11 ansible_ssh_port=2201
+
+[nexus]
+devlab1-nexs001v  ansible_host=192.168.10.12 ansible_ssh_port=2202
+
+[ci_cd_tools:children]
+jenkins2
+gitlab
+nexus
