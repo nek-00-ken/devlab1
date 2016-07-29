@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "jenkins2" do |machine|
     machine.vm.hostname = "devlab1-jnks001v"
     machine.vm.network "private_network", ip: "192.168.10.10"
-    machine.vm.network "forwarded_port", guest: 2200, host: 22
+    machine.vm.network "forwarded_port", guest: 22, host: 2200
     machine.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
     end
@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "gitlab" do |machine|
     machine.vm.hostname = "devlab1-glab001v"
     machine.vm.network "private_network", ip: "192.168.10.11"
-    machine.vm.network "forwarded_port", guest: 2201, host: 22
+    machine.vm.network "forwarded_port", guest: 22, host: 2201
     machine.vm.provider "virtualbox" do |vb|
       vb.memory = "2048"
     end
@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "nexus" do |machine|
     machine.vm.hostname = "devlab1-nexs001v"
     machine.vm.network "private_network", ip: "192.168.10.12"
-    machine.vm.network "forwarded_port", guest: 2203, host: 22
+    machine.vm.network "forwarded_port", guest: 22, host: 2202
     machine.vm.provider "virtualbox" do |vb|
       vb.memory = "1024"
     end
